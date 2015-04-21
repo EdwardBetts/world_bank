@@ -165,15 +165,14 @@ def get_pca(in_data):
         print " + ".join("(%.3f x %s)" % (value, name) for value, name in zip(component, feature_names))
 
 
-    # read out countries of interest
-    # a = []
-    # for idx, val in enumerate(x_pca):
-    #     if val[0] < 0.2 and val[1] < -1.0:
-    #         a.append([good_countries[idx], val])
-    # a.sort(key=lambda x: x[1][1])
-    # pprint(a)
-    #
-
+    read out countries of interest
+    a = []
+    for idx, val in enumerate(x_pca):
+        if val[0] < 0.2 and val[1] < -1.0:
+            a.append([good_countries[idx], val])
+    a.sort(key=lambda x: x[1][1])
+    pprint(a)
+    
     return x_pca
 
 
