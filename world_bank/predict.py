@@ -119,7 +119,7 @@ def get_pca(in_data):
 
         # handle countries with too much missing data
         if mratio > (1.0 - min_compl):
-            incompl.append(val+' '+"{:.1f}%".format(100.0*(1-mratio)))
+            incompl.append(val + " {:.1%}".format(1 - mratio))
             idx_incompl.append(idx)
             bcnt += 1
             continue
